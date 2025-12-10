@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finanças</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Finanças</h1>
+
+  <div class="entrada">
+    <input id="sal" type="number" step="0.01" min="0" placeholder="Salário">
+    <button onclick="salvar()">Salvar</button>
+
+    <input id="nome" type="text" placeholder="Nome da despesa">
+    <input id="data" type="text" placeholder="xx/xx/xxxx">
+    <input id="valor" type="number" step="0.01" min="0" placeholder="Valor">
+
+    <button id="btnAdd" onclick="adicionar()">Adicionar</button>
+    <button onclick="limpar()">Apagar tudo</button>
+    <button onclick="resumo()">Resumo</button>
+  </div>
+
+  <div class="resumo-simples">
+    <div>Salário: <span id="salDisplay">R$ 0,00</span></div>
+    <div>Total despesas: <span id="totalDisplay">R$ 0,00</span></div>
+    <div>Saldo: <span id="saldoDisplay">R$ 0,00</span></div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <h2>Despesas</h2>
+      <ul id="lista"></ul>
+    </div>
+  </div>
+
+  <script src="js/notas.js"></script>
+</body>
+</html>
